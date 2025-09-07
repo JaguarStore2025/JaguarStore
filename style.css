@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+Arabic:wght@400;700&display=swap');
+
+body {
+    font-family: 'Noto Sans Arabic', 'Inter', sans-serif;
+    direction: rtl;
+    text-align: right;
+    scroll-behavior: smooth;
+    color: #e2e8f0;
+}
+
+.glass {
+    background-color: rgba(2, 6, 23, 0.6);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.pcard {
+    background-color: #1e293b;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease-in-out;
+}
+
+.pcard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+.badge {
+    background-color: #0ea5e9;
+    color: #020617;
+    font-weight: bold;
+}
+
+.cart-panel {
+    transform: translateX(110%);
+    transition: transform 0.4s ease-in-out;
+}
+
+.wishlist-panel {
+    transform: translateX(110%);
+    transition: transform 0.4s ease-in-out;
+}
+
+.modal {
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.compat-warning {
+    color: #fca5a5;
+    background-color: #450a0a;
+    border: 1px solid #7f1d1d;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+}
+
+.carousel-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel-slide {
+    width: 100%;
+    text-align: right;
+}
+
+/* FAQ styles for collapse/expand */
+.faq-content.hidden {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 1.25rem;
+    opacity: 0;
+}
+
+.faq-content.active {
+    max-height: 500px; /* A large value to allow for expansion */
+    padding: 1.25rem;
+    opacity: 1;
+}
+
+/* WhatsApp Floating Button Animation */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.whatsapp-btn {
+    animation: bounce 2s infinite;
+}
